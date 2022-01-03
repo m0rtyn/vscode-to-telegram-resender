@@ -11,9 +11,7 @@ app.post('post', (req, res) => {
   res.send('Post scheduled')
   
   setTimeout(() => {
-    const data = {
-      ...payload,
-    }
+    const data = payload
     axios.post("https://api.telegram.org/bot1427261129:AAEHCboM0MC81MI5qYv4t2lg6phVcBYXTL4/sendMessage", data)
   }, postDelay)
 })
