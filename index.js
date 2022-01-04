@@ -27,6 +27,7 @@ app.post("/posting", jsonParser, (req, res) => {
       )
       .then((res) => {
         console.log(res)
+        // FIXME: res.send doesn't work
         res.send("Post scheduled")
       })
       .catch((e) => {
