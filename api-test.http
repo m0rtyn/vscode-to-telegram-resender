@@ -1,0 +1,8 @@
+# POST https://vscode-to-telegram-resender.herokuapp.com/post HTTP/1.1
+POST http://localhost:3000/posting HTTP/1.1
+content-type: application/json
+
+{
+  "text": "Hello, world",
+  "chat_id": "-1001304984709"
+}
