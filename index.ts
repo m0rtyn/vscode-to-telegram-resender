@@ -13,7 +13,7 @@ app.get("", () => {
 
 app.post("/posting", jsonParser, (req, res) => {
   const payload = req.body
-  const postDelay = 60 * 1000 // seconds
+  const postDelay = 24 * 60 * 60 * 1000 // milliseconds in day
 
   res.on("error", (error) => {
     console.log(error)
