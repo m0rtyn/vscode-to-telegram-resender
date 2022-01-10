@@ -1,7 +1,8 @@
+require('dotenv').config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var axios = require("axios").default;
-var BOT_TOKEN = "1427261129:AAEHCboM0MC81MI5qYv4t2lg6phVcBYXTL4";
+var BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 var app = express();
 var jsonParser = bodyParser.json();
 var PORT = 3000;

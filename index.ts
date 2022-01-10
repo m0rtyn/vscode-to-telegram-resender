@@ -1,8 +1,9 @@
+require('dotenv').config()
 const express = require("express")
 const bodyParser = require("body-parser")
 const axios = require("axios").default
 
-const BOT_TOKEN = "1427261129:AAEHCboM0MC81MI5qYv4t2lg6phVcBYXTL4"
+const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN
 const app = express()
 const jsonParser = bodyParser.json()
 
