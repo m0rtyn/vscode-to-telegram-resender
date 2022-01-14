@@ -23,7 +23,7 @@ app.post("/posting", jsonParser, function (req, res) {
             console.log(res);
         })
             .catch(function (e) {
-            console.error(e);
+            console.error("🛑", e);
         });
     }, postDelay);
 });

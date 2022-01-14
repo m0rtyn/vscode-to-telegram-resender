@@ -31,7 +31,7 @@ app.post("/posting", jsonParser, (req, res) => {
         console.log(res)
       })
       .catch((e) => {
-        console.error(e)
+        console.error("🛑", e)
       })
   }, postDelay)
 })
