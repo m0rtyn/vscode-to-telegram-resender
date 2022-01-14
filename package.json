@@ -1,5 +1,5 @@
 {
-  "name": "cron_job",
+  "name": "http-to-telegram-resender",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
