@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
       {
-        name: 'cron-job',
+        name: 'resender',
         script: 'dist/index.js',
         args: 'index.js',
         instances: 1,
@@ -9,7 +9,7 @@ module.exports = {
         error_file: './logs/err.log',
         out_file: './logs/out.log',
         log_file: './logs/combined.log',
-        log_date_format: 'YYYY-MM-DD HH:mm:ss:SSSS',
+        log_date_format: 'YYYY-MM-DD HH:mm:ss',
         min_uptime: 10000,
         max_restarts: 3,
       },

@@ -20,8 +20,9 @@ app.post("/posting", jsonParser, (req, res) => {
     console.log(error)
   })
 
+  res.send("Post scheduled")
+  
   setTimeout(() => {
-    res.send("Post scheduled")
     return axios
       .post(
         `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
