@@ -4,7 +4,7 @@ import * as bodyParser from "body-parser"
 import axios from "axios"
 
 dotenv.config()
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN
 
 const app = express()
