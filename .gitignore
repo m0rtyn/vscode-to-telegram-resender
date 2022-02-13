@@ -1,3 +1,6 @@
 dist
 node_modules
 .env
+index.js.map
+yarn.lock
+logs
