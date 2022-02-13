@@ -14,8 +14,7 @@ app.get("", function () {
 });
 app.post("/posting", jsonParser, function (req, res) {
     var payload = req.body;
-    // const postDelay = 24 * 60 * 60 * 1000 // milliseconds in day
-    var postDelay = 60 * 60 * 1000; // milliseconds in day
+    var postDelay = 24 * 60 * 60 * 1000; // milliseconds in day
     res.on("error", function (error) {
         console.log(error);
     });

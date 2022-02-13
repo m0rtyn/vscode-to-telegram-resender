@@ -16,8 +16,7 @@ app.get("", () => {
 
 app.post("/posting", jsonParser, (req, res) => {
   const payload: {test: string, chat_id: string} = req.body
-  // const postDelay = 24 * 60 * 60 * 1000 // milliseconds in day
-  const postDelay = 60 * 60 * 1000 // milliseconds in day
+  const postDelay = 24 * 60 * 60 * 1000 // milliseconds in day
 
   res.on("error", (error) => {
     console.log(error)
