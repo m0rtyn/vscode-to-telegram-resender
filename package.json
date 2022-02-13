@@ -7,7 +7,7 @@
     "dev": "nodemon index.js",
     "start": "yarn build && yarn pm2:start",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-console.log.log --copy-files",
-    "pm2:start": "pm2 start ecosystem.config.js"
+    "pm2:start": "pm2 start ecosystem.config.js --no-daemon"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,9 @@
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^8.9.0",
     "nodemon": "^2.0.7"
   }
 }
