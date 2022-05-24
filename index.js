@@ -9,26 +9,23 @@ var PORT = process.env.PORT || 3000;
 var BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 var app = express();
 var jsonParser = bodyParser.json();
-app.get("", function () {
+app.get("", function (req, res) {
     console.log("BANG");
 });
 app.post("/posting", jsonParser, function (req, res) {
     var payload = req.body;
-    var postDelay = 24 * 60 * 60 * 1000; // milliseconds in day
     res.on("error", function (error) {
         console.log(error);
     });
     res.send("Post scheduled");
-    setTimeout(function () {
-        return axios_1.default
-            .post("https://api.telegram.org/bot".concat(BOT_TOKEN, "/sendMessage"), payload)
-            .then(function (res) {
-            console.log("🚀 ~ .then ~ res.status, res.data", res.status, res.data);
-        })
-            .catch(function (e) {
-            console.error("🛑", e);
-        });
-    }, postDelay);
+    return axios_1.default
+        .post("https://api.telegram.org/bot".concat(BOT_TOKEN, "/sendMessage"), payload)
+        .then(function (res) {
+        console.log("🚀 ~ .then ~ res.status, res.data", res.status, res.data);
+    })
+        .catch(function (e) {
+        console.error("🛑", e);
+    });
 });
 app.listen(PORT, function () { return console.log("App is running on port " + PORT); });
 //# sourceMappingURL=index.js.map
